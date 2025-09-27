@@ -1,0 +1,887 @@
+:root {
+  --blue: #4663ac;
+  --lightblue: #e1f1fd;
+  --heading-font: 'Poppins', sans-serif;
+  --body-font: 'Inter', sans-serif;
+}
+
+body {
+  font-family: var(--body-font);
+  background-color: #fdffff;
+  color: rgba(0,0,0,0.85);
+}
+
+h1, h2, h3, .any-heading, .degree {
+  font-family: var(--heading-font);
+}
+
+
+* {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    border: none;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+body{
+    background-color: #fdffff;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+.any-heading{
+    color: var(--blue);
+    display: inline-block;
+    padding-bottom: 8px;
+    position: relative;
+    margin-top: 5rem;
+    margin-bottom: 3rem;
+}
+
+.any-heading::before{
+    content: "";
+    position: absolute;
+    width: 50%;
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    border-bottom: 3px solid var(--blue);
+}
+
+.any-heading-marginless{
+    color: var(--blue);
+    display: inline-block;
+    padding-bottom: 8px;
+    position: relative;
+    margin-top: 0.8rem;
+    margin-bottom: 1rem;
+}
+
+.any-heading-marginless::before{
+    content: "";
+    position: absolute;
+    width: 50%;
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    border-bottom: 2.5px solid var(--blue);
+}
+
+.any-btn{
+    background-color: #4663ac;
+    color: #FFF;
+    cursor: pointer;
+    font-size: 18px;
+    border: none;
+    border-radius: 8px;
+    transition: all 0.3s ease 0s;
+    outline: none;
+}
+
+.any-btn:hover{
+    box-shadow: 0px 15px 20px rgba(82, 159, 178, 0.8);
+    transform: translateY(-3px);
+}
+
+.any-btn i {
+    padding: 0 0.5rem;
+    font-size: 16px;
+}
+
+/* css for the home page */
+.navbar {
+    background: rgb(#FFF) !important;
+    -webkit-box-shadow: 0 4px 8px -6px #222;
+    -moz-box-shadow: 0 4px 8px -6px #222;
+    box-shadow: 0 4px 8px -6px #222;
+}
+
+a.nav-link, button.nav-link {
+    color: rgba(0, 0, 0, 0.8) !important;
+    font-size: 16px !important;
+    margin-left: 7px;
+    margin-right: 7px;
+    font-weight: 510;
+    text-align: center;
+    background: none;
+    border: none;
+}
+
+.navbar form i {
+    font-size: 24px;
+    color:var(--blue) !important;
+}
+
+.navbar-toggler {
+    background: #eee;
+}
+
+.navbar ul li:hover a,
+.navbar ul li:hover button{
+    background-color: var(--blue);
+    color: #FFF !important;
+}
+
+.nav-profile-icons {
+    color: rgba(0, 0, 0, 0.8) !important;
+    padding: 5px;
+    margin: 0px, 0px, 0px, 10px;
+    font-size: 2.2rem;
+    margin-right: 2rem;
+}
+
+a.nav-blog-icon{
+    font-size: 14px;
+    background-color:var(--blue) !important;
+    color: #fff;
+    padding: 1px 18px;
+    font-weight: 520;
+    margin-right: 2rem;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    outline: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.navbar form a:hover {
+    color: #fff;
+}
+
+.nav-img {
+    height: 4.5rem;
+    width: 12rem;
+    margin-left: 2rem;
+}
+
+@media (max-width: 480px) {
+    .nav-img {
+        height: 3.8rem;
+        width: 12rem;
+        margin-left: 0.5rem;
+    }
+}
+
+ul.dropdown-menu {
+    background: rgba(0, 0, 0, 0.7) !important;
+    margin-top: 9px !important;
+    padding: 10px;
+}
+
+ul.dropdown-menu li a:hover {
+    background: rgba(0, 0, 0, 0.9) !important;
+}
+
+ul.dropdown-menu .dropdown-item {
+    font-size: 2rem;
+    color: rgba(255, 255, 255, 0.8) !important;
+}
+
+/* css for home */
+.home{
+    margin-top: 5rem;
+}
+
+.home-pro-img {
+    height: 20rem;
+    width: 20rem;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 0.7rem;
+}
+
+.info h1 {
+    font-size: 2.5rem;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.85);
+}
+
+.info h3 {
+    font-size: 1.4rem;
+    font-weight: 350;
+    color: rgba(0, 0, 0, 0.85);
+}
+
+.cv-btn{
+    padding: 0.7rem 3rem;
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+.introduction p{
+    font-size: 16px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+}
+
+.profile-wrap a{
+    text-decoration: none;
+    color: #000;
+}
+
+.profile-wrap i{
+    font-size: 20px;
+    margin-bottom: 6px;
+    margin-top: 6px;
+}
+
+.profile-wrap h3{
+    font-size: 16px;
+}
+
+.profile-wrap{
+    width: 22%;
+    background-color: var(--blue);
+    color: #FFF;
+    border: none;
+    border-radius: 5px;
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+    padding-top: 12px;
+    padding-bottom: 15px;
+}
+
+.profile-wrap:hover{
+    box-shadow: 0px 15px 20px rgba(82, 159, 178, 0.8);
+    transform: translateY(-3px);
+}
+
+.profile-wrap h3{
+    color: #FFF;
+}
+
+.profile-wrap i{
+    color: #FFF;
+}
+
+.prof-heading{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.m-left{
+    margin-left: 10px;
+}
+
+@media (max-width: 1220px) {
+    .home{
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-bottom: 40px;
+    }
+    .home-pro-img {
+        height: 18rem;
+        width: 18rem;
+    }
+    .info h1 {
+        font-size: 2.1rem;
+    }
+    .info h3 {
+        font-size: 1.2rem;
+    }
+    .profile-wrap{
+        width: 30%;
+    }
+    .last-one{
+        margin-top: 20px;
+        margin-left: 0px;
+    }
+}
+
+@media (max-width: 768px) {
+    .personal-information{
+        text-align: center;
+    }
+    .cv-btn{
+        margin-bottom: 40px;
+    }
+}
+
+@media (max-width: 480px) {
+    .home-pro-img {
+        height: 13rem;
+        width: 13rem;
+    }
+    .profile-wrap h3{
+        font-size: 12px;
+    }
+    .profile-wrap:hover i{
+        color: #FFF;
+    }
+    .index-info{
+        margin-left: 8px;
+        margin-right: 8px;
+    }
+}
+
+/* css for the academic page */
+
+.academic-roadmap {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  margin: 3rem 0;
+}
+
+.academic-roadmap::before {
+  content: "";
+  position: absolute;
+  top: 40px;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--blue);
+}
+
+.roadmap-content h3 {
+  font-size: 1.6rem;
+  font-weight: 600;
+  font-family: var(--heading-font);
+  color: var(--blue);
+}
+
+.roadmap-content p {
+  font-size: 1.2rem;
+  font-family: var(--body-font);
+  color: rgba(0,0,0,0.7);
+}
+
+.roadmap-item {
+  text-align: center;
+  width: 22%;
+  position: relative;
+}
+
+.roadmap-logo {
+  height: 60px;
+  margin-bottom: 1rem;
+}
+
+.roadmap-dot {
+  width: 20px;
+  height: 20px;
+  background: var(--blue);
+  border-radius: 50%;
+  margin: 0 auto 1rem auto;
+  position: relative;
+  z-index: 2;
+}
+
+.roadmap-content h3 {
+  font-size: 1.4rem;
+  color: var(--blue);
+  margin-bottom: 0.5rem;
+}
+
+.roadmap-content p {
+  font-size: 1.2rem;
+  margin: 0.2rem 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .academic-roadmap {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .academic-roadmap::before {
+    display: none;
+  }
+  .roadmap-item {
+    width: 100%;
+    text-align: left;
+    margin-bottom: 2rem;
+  }
+  .roadmap-dot {
+    margin: 0 1rem 0 0;
+    display: inline-block;
+  }
+}
+
+
+
+
+
+
+
+/* css for the publication page */
+.pub-card{
+    color: #000;
+    border-radius: 10px;
+    transition: all 0.3s ease 0s;
+    outline: none;
+}
+
+.card:hover{
+    box-shadow: 0px 15px 20px rgba(82, 159, 178, 0.8);
+}
+
+.pub-year{
+    display: inline-block;
+    background-color: var(--blue);
+    color: #FFF;
+    font-size: 16px;
+    border-radius: 3px;
+    margin-top: 5px;
+    margin-bottom: 7px;
+    padding: 1.5px 4px;
+}
+
+.pub-info{
+    margin-left: 16%;
+}
+
+.pub-float{
+    width: 15%;
+    float: left;
+    text-align: right;
+}
+
+.pub-type{
+    display: inline-block;
+    background-color: var(--blue);
+    color: #FFF;
+    font-size: 16px;
+    padding: 1.5px 12px;
+    border-radius: 3px;
+}
+
+.pub-butn{
+    background-color: #4663ac;
+    padding: 0.6rem 2rem;
+    color: #FFF;
+    font-size: 16px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.card-body h3{
+    font-size: 22px;
+}
+
+.card-body p{
+    font-size: 16px;
+}
+
+@media (max-width: 576px) {
+    .card-body h3{
+        font-size: 16px;
+    }
+    
+    .card-body p{
+        font-size: 12px;
+    } 
+    .pub-butn{
+        font-size: 14px;
+    }
+
+    .pub-butn i{
+        font-size: 14px;
+    }
+    .pub-info{
+        margin-left: 25%;
+    }
+    .pub-float{
+        width: 24%;
+    }
+    .pub-type{
+        font-size: 12px;
+    }
+    .pub-year{
+        font-size: 12px;
+    }
+}
+
+/* css for the project page */
+.project-card img{
+    max-width: 80% !important;
+    max-height: 300px !important;
+    margin-top: 15px;
+}
+
+.project-btn-git{
+    padding: 6px 15px;
+    margin-right: 20px;
+}
+
+.project-btn-report{
+    padding: 6px 15px;
+}
+
+.project-btn-git{
+    font-size: 16px;
+}
+
+.project-btn-report{
+    font-size: 16px;
+}
+
+.project-btn-git i{
+    font-size: 16px;
+}
+
+.project-btn-report i{
+    font-size: 16px;
+}
+
+@media (max-width: 992px) {
+    .g1{
+        margin-bottom: 15px;
+    }
+    .project-btn-git{
+        font-size: 14px;
+    }
+    
+    .project-btn-report{
+        font-size: 14px;
+    }
+    .project-btn-git i{
+        font-size: 12px;
+    }
+    
+    .project-btn-report i{
+        font-size: 12px;
+    }
+}
+
+/* css for the thesis page */
+.thesis-img {
+    height: 40rem;
+    width: 38rem;
+    margin-top: 2rem;
+    margin-right: 2rem;
+}
+
+@media (max-width: 480px) {
+    section.thesis .heading {
+        font-size: 3rem;
+    }
+    .thesis-img {
+        width: 270px !important;
+    }
+    .tm-1 {
+        height: 300px;
+    }
+    .tm-2 {
+        height: 250px;
+    }
+}
+
+/* css for the certificate page */
+.certi-outer-container{
+    margin-bottom: 20px;
+    padding: 40px;
+    box-shadow: 3px 3px 10px -1px var(--blue);
+    border-radius: 10px;
+    transition: all 0.3s ease 0s;
+}
+
+.outer-cont-heading{
+    margin-bottom: 20px;
+}
+
+.deep-learn{
+    margin-bottom: 40px;
+}
+
+.cer-card{
+    padding: 10px;
+    box-shadow: none;
+}
+
+.cer-btn{
+    padding: 6px 15px;
+    font-size: 14px;
+}
+
+.cer-btn:hover{
+    color: #FFF !important;
+    box-shadow: none;
+}
+
+@media (max-width: 988px) {
+    .third-card{
+        margin-top: 20px;
+    }
+    .fourth-card{
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .certification{
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    .cer-card{
+        width: 22rem !important;
+    }
+    .first-card{
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 372px) {
+    .cer-card{
+        width: 18rem !important;
+    }
+}
+
+/* css for the skill page */
+.skill h3 {
+    font-size: 20px;
+}
+
+.skill i {
+    font-size: 22px;
+    margin-right: 7px;
+}
+
+.skill ul li {
+    font-size: 18px;
+    margin-left: 35px;
+}
+
+.skill-type {
+    margin-bottom: 15px;
+}
+
+.skill-box {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+@media (max-width: 480px) {
+    .skill h3 {
+        font-size: 16px;
+    }
+    .skill i {
+        font-size: 17px;
+        margin-right: 7px;
+    }
+    .skill ul li {
+        font-size: 16px;
+        margin-left: 25px;
+    }
+}
+
+/* css for the experience section */
+.ex-heading{
+    margin-bottom: 30px;
+}
+
+.ex-nsu-logo{
+    height: 120px;
+    width: 100px;
+    margin-left: 10px;
+    margin-top: 5px;
+    margin-bottom: -8px;
+}
+
+.main-timeline-2 {
+    position: relative;
+}
+  
+/* The actual timeline (the vertical ruler) */
+.main-timeline-2::after {
+    content: "";
+    position: absolute;
+    width: 3px;
+    background-color: var(--blue);
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+}
+
+/* Container around content */
+.timeline-2 {
+    position: relative;
+    background-color: inherit;
+    width: 50%;
+}
+
+/* The circles on the timeline */
+.timeline-2::after {
+    content: "";
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: -11px;
+    background-color: var(--blue);
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+/* Place the container to the left */
+.left-2 {
+    padding: 0px 40px 20px 0px;
+    left: 0;
+}
+
+/* Place the container to the right */
+.right-2 {
+    padding: 0px 0px 20px 40px;
+    left: 50%;
+}
+
+/* Add arrows to the left container (pointing right) */
+.left-2::before {
+    content: " ";
+    position: absolute;
+    top: 18px;
+    z-index: 1;
+    right: 30px;
+    border: medium solid var(--blue);
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent var(--blue);
+}
+
+/* Add arrows to the right container (pointing left) */
+.right-2::before {
+    content: " ";
+    position: absolute;
+    top: 18px;
+    z-index: 1;
+    left: 30px;
+    border: medium solid var(--blue);
+    border-width: 10px 10px 10px 0;
+    border-color: transparent var(--blue) transparent transparent;
+}
+
+/* Fix the circle for containers on the right side */
+.right-2::after {
+    left: -14px;
+}
+
+/* Media queries - Responsive timeline on screens less than 600px wide */
+@media screen and (max-width: 600px) {
+    /* Place the timelime to the left */
+    .main-timeline-2::after {
+        left: 31px;
+    }
+
+    /* Full-width containers */
+    .timeline-2 {
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 25px;
+    }
+
+    /* Make sure that all arrows are pointing leftwards */
+    .timeline-2::before {
+        left: 60px;
+        border: medium solid var(--blue);
+        border-width: 10px 10px 10px 0;
+        border-color: transparent var(--blue) transparent transparent;
+    }
+
+    /* Make sure all circles are at the same spot */
+    .left-2::after,
+    .right-2::after {
+        left: 18px;
+    }
+
+    .left-2::before {
+        right: auto;
+    }
+
+    /* Make all right containers behave like the left ones */
+    .right-2 {
+        left: 0%;
+    }
+}
+
+/* css for blog page */
+.blog-card{
+    box-shadow: 3px 3px 5px hsla(0, 0%, 0%, 0.5);
+}
+
+.blog-des{
+    margin-left: 46%;
+}
+
+.blog-img{
+    width: 45%;
+    float: left;
+    text-align: center;
+}
+
+.blog-img img {
+    width: 70%;
+}
+
+/* Additional styles for React components */
+.main-content {
+    min-height: calc(100vh - 80px);
+}
+
+/* Thesis specific styles */
+.heading {
+    font-size: 4rem;
+    color: var(--blue);
+    text-align: center;
+    margin: 3rem 0;
+}
+
+.heading span {
+    color: var(--blue);
+}
+
+.project-holder {
+    padding: 2rem;
+}
+
+.project-des {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    text-align: justify;
+}
+
+.project-img-holder {
+    margin: 3rem 0;
+}
+
+.img-title {
+    text-align: center;
+    font-weight: bold;
+    margin-top: 1rem;
+    font-size: 14px;
+}
+
+.butn {
+    background-color: var(--blue);
+    color: #FFF;
+    padding: 0.8rem 2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.butn:hover {
+    box-shadow: 0px 10px 15px rgba(82, 159, 178, 0.6);
+    transform: translateY(-2px);
+}
+
+.publication-btn-1 {
+    margin-right: 1rem;
+}
