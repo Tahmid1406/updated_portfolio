@@ -42,7 +42,7 @@ const Certification = () => {
   return (
     <section className="certification">
       <div className="container">
-        <h2 className="any-heading">Certifications</h2>
+        <h2 className="any-heading-marginless">Certifications</h2>
 
         <div className="cert-grid">
           {certificates.map((cert, index) => (

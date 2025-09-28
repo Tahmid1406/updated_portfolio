@@ -35,7 +35,7 @@ const Academics = () => {
   return (
     <div className="academics-section">
       <div className="container">
-        <h2 className="any-heading">Academic Credentials</h2>
+        <h2 className="any-heading-marginless">Academic Credentials</h2>
         <div className="academic-roadmap">
           {academicData.map((item, index) => (
             <div key={index} className="roadmap-item">

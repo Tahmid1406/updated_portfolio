@@ -11,7 +11,7 @@ body {
   color: rgba(0,0,0,0.85);
 }
 
-h1, h2, h3, .any-heading, .degree {
+h1, h2, h3, .any-heading-marginless, .degree {
   font-family: var(--heading-font);
 }
 
@@ -31,31 +31,12 @@ html {
     overflow-x: hidden;
 }
 
-body{
-    background-color: #fdffff;
-}
+
 
 a:link {
     text-decoration: none;
 }
 
-.any-heading{
-    color: var(--blue);
-    display: inline-block;
-    padding-bottom: 8px;
-    position: relative;
-    margin-bottom: 3rem;
-}
-
-.any-heading::before{
-    content: "";
-    position: absolute;
-    width: 50%;
-    height: 1px;
-    bottom: 0;
-    left: 0;
-    border-bottom: 3px solid var(--blue);
-}
 
 .any-heading-marginless{
     color: var(--blue);
@@ -64,7 +45,10 @@ a:link {
     position: relative;
     margin-top: 0.8rem;
     margin-bottom: 1rem;
+    font-size: 1.8rem;
+    font-weight: 500;
 }
+
 
 .any-heading-marginless::before{
     content: "";
@@ -117,10 +101,12 @@ a:link {
   gap: 1rem;
 }
 
+
+
 .dark-toggle {
   background: none;
   border: none;
-  font-size: 1.4rem;
+  font-size: 1.8rem;
   cursor: pointer;
   transition: transform 0.2s ease;
 }
@@ -154,7 +140,7 @@ a:link {
 .nav-link {
   background: none;
   border: none;
-  font-size: 1rem;
+  font-size: 1.2rem;
   font-weight: 500;
   cursor: pointer;
   position: relative;
@@ -190,8 +176,8 @@ a:link {
 /* Social icons */
 .nav-socials a {
   color: #334155;
-  font-size: 1.2rem;
-  margin-left: 1rem;
+  font-size: 1.8rem;
+  margin-left:2rem;
   transition: color 0.3s ease, transform 0.2s ease;
 }
 
@@ -357,15 +343,9 @@ h1, h2, h3 {
 }
 
 /* --------------- BIO --------------- */
-.any-heading-marginless {
-  font-size: 1.6rem;
-  font-weight: 600;
-  color: var(--blue);
-  margin-bottom: 1rem;
-}
 
 .introduction {
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   line-height: 1.6;
   margin-bottom: 2rem;
   font-weight: 400;
@@ -578,17 +558,7 @@ h1, h2, h3 {
 
 
 /* css for the publication page */
-:root {
-  --blue: #4663ac;
-  --dark: #1a1a1a;
-  --text: rgba(0,0,0,0.8);
-  --light-gray: #f7f9fc;
-}
 
-/* ---------- PAGE LAYOUT ---------- */
-.publication {
-  background: #fff;
-}
 
 .pub-head {
   font-size: 2rem;
@@ -793,11 +763,6 @@ h1, h2, h3 {
   --bg-light: #f9f9fb;
 }
 
-/* -------- Section -------- */
-.projects-section {
- 
-  background: #fff;
-}
 
 .projects-section h2 {
   text-align: center;
@@ -941,43 +906,112 @@ h1, h2, h3 {
 
 
 
+/* ===== Thesis Section ===== */
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* css for the thesis page */
-.thesis-img {
-    height: 40rem;
-    width: 38rem;
-    margin-top: 2rem;
-    margin-right: 2rem;
+/* Distinguishable Blocks */
+.thesis-block {
+  margin-bottom: 4rem;
+  padding: 2rem;
+  border-radius: 12px;
 }
 
-@media (max-width: 480px) {
-    section.thesis .heading {
-        font-size: 3rem;
-    }
-    .thesis-img {
-        width: 270px !important;
-    }
-    .tm-1 {
-        height: 300px;
-    }
-    .tm-2 {
-        height: 250px;
-    }
+/* Thesis Divider */
+.thesis-divider {
+  width: 100%;
+  height: 1px;
+  background: #e5e7eb;   /* light gray line, subtle */
+  margin: 4rem 0;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05); /* soft shadow like Experience page */
 }
+
+
+.thesis-ms {
+  background: #f0f4ff; /* light bluish */
+}
+
+.thesis-bsc {
+  background: #f9f9fb; /* light gray */
+}
+
+/* Professional Gallery */
+.thesis-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.gallery-item {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.gallery-item:hover {
+  transform: translateY(-4px);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+}
+
+.gallery-caption {
+  font-size: 0.9rem;
+  text-align: center;
+  padding: 0.8rem;
+  color: #475569;
+  font-style: italic;
+  border-top: 1px solid #e5e7eb;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.butn {
+    background-color: var(--blue);
+    color: #FFF;
+    padding: 0.8rem 2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.butn:hover {
+  background: #35529a;
+  transform: translateY(-2px);
+}
+
+.butn.secondary {
+  background: #6c757d;
+}
+
+.butn.secondary:hover {
+  background: #555d65;
+}
+
+
+
+
+
+
+
+
 
 /* css for the certificate page */
 /* Section */
@@ -1113,19 +1147,8 @@ h1, h2, h3 {
 
 
 
-/* css for the experience section */
-:root {
-  --blue: #4663ac;
-  --dark: #1a1a1a;
-  --text: rgba(0,0,0,0.85);
-  --muted: rgba(0,0,0,0.6);
-  --border: #e6e9f0;
-}
 
 /* ------- Section ------- */
-.experience {
-  background: #fff;
-}
 
 .ex-heading {
   font-size: 2rem;
@@ -1270,17 +1293,7 @@ h1, h2, h3 {
     font-size: 14px;
 }
 
-.butn {
-    background-color: var(--blue);
-    color: #FFF;
-    padding: 0.8rem 2rem;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    margin: 0.5rem;
-    transition: all 0.3s ease;
-}
+
 
 .butn:hover {
     box-shadow: 0px 10px 15px rgba(82, 159, 178, 0.6);
@@ -1338,6 +1351,48 @@ body.dark-mode .any-heading {
   color: #93c5fd; /* soft blue for headings */
 }
 
+body.dark-mode .card,
+body.dark-mode .skill-box,
+body.dark-mode .cert-card,
+body.dark-mode .project-entry,
+body.dark-mode .experience-entry {
+  background: #1f2937;
+  border-color: #374151;
+  color: #e5e7eb;
+}
+
+
+/* Dark mode base */
+body.dark-mode {
+  background: #111827; /* dark background */
+  color: #e5e7eb;      /* default text color */
+}
+
+/* Keep headings unchanged (blue) */
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode .any-heading-marginless,
+body.dark-mode .section-subheading {
+  color: var(--blue);
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+
+/* Text, paragraphs, and descriptions → white */
+body.dark-mode p,
+body.dark-mode li,
+body.dark-mode .introduction,
+body.dark-mode .project-desc,
+body.dark-mode .pub-info p,
+body.dark-mode .cert-issuer,
+body.dark-mode .cert-date,
+body.dark-mode .exp-details h5,
+body.dark-mode .exp-period {
+  color: #e5e7eb !important;
+}
+
+/* Cards and containers adapt */
 body.dark-mode .card,
 body.dark-mode .skill-box,
 body.dark-mode .cert-card,

@@ -22,7 +22,7 @@ const Navbar = ({ activeSection, setActiveSection }) => {
     { id: 'projects', label: 'Projects' },
     { id: 'certifications', label: 'Certification' },
     { id: 'thesis', label: 'Thesis' },
-    { id: 'blog', label: 'Blog' },
+    // { id: 'blog', label: 'Blog' },
   ];
 
   const handleNavClick = (sectionId) => {

@@ -88,7 +88,7 @@ const Home = () => {
             </div>
 
             
-            <h2 className="prof-heading any-heading-marginless">Profiles</h2>
+            <h2 className="any-heading-marginless">Profiles</h2>
             <div className="row profiles-containers text-center">
               <div className="col-md-3 col-sm-6 profile-wrap text-center">
                 <a href="https://www.researchgate.net/profile/Tahmid-Pranto" target="_blank" rel="noopener noreferrer">

@@ -29,7 +29,7 @@ const Projects = () => {
   return (
     <section className="projects-section">
       <div className="container">
-        <h2 className="any-heading">Projects</h2>
+        <h2 className="any-heading-marginless">Projects</h2>
 
         <div className="projects-list">
           {projectsData.map((project, index) => (

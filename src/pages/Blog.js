@@ -14,7 +14,7 @@ const Blog = () => {
   return (
     <div className="blog">
       <div className="container">
-        <h2 className="any-heading">My Blogs</h2>
+        <h2 className="any-heading-marginless">My Blogs</h2>
 
         {blogPosts.map((post, index) => (
           <div key={index} className="card mb-5">

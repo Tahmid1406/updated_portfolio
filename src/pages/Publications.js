@@ -71,7 +71,7 @@ const Publications = () => {
   return (
     <div className="publication">
       <div className="container">
-        <h2 className="any-heading pub-head">Publications</h2>
+        <h2 className="any-heading-marginless">Publications</h2>
 
         {publicationsData.map((pub, index) => (
           <div key={index} className="card mb-5">
