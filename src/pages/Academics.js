@@ -3,9 +3,11 @@ import React from "react";
 const Academics = () => {
   const academicData = [
     {
-      degree: "Incoming Computer Science Ph.D. Student",
-      institution: "Oregon State University, OR, United States",
-      period: "Fall 2025 - Present",
+      degree: "M.S. in Computer Science",
+      institution: "Oregon State University, Covallis, OR-97330, United States",
+      grade: "CGPA: 3.57/4.00",
+      distinction: "Cum Laude",
+      period: "Fall 2025 - Winter 2025",
       logo: "/images/osu.png"
     },
     {

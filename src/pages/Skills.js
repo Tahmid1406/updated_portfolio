@@ -39,19 +39,17 @@ const Skills = () => {
       <div className="container">
         <h2 className="any-heading">Coding and Software Skills</h2>
 
-        <div className="row skill-container">
+        <div className="skill-grid">
           {skillsData.map((skillGroup, index) => (
-            <div key={index} className="col-lg-6 col-md-12">
-              <div className="skill-box">
-                <h3 className="skill-type">
-                  <i className={skillGroup.icon}></i> {skillGroup.category}
-                </h3>
-                <ul>
-                  {skillGroup.skills.map((skill, skillIndex) => (
-                    <li key={skillIndex}>{skill}</li>
-                  ))}
-                </ul>
-              </div>
+            <div key={index} className="skill-box">
+              <h3 className="skill-type">
+                <i className={skillGroup.icon}></i> {skillGroup.category}
+              </h3>
+              <ul>
+                {skillGroup.skills.map((skill, skillIndex) => (
+                  <li key={skillIndex}>{skill}</li>
+                ))}
+              </ul>
             </div>
           ))}
         </div>

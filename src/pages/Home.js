@@ -5,6 +5,8 @@ const Home = () => {
     <div className="home" id="home">
       <div className="container">
         <div className="row">
+          
+          {/* Left column – photo & personal info */}
           <div className="col-md-5 col-sm-12 personal-information">
             <div>
               <img 
@@ -17,7 +19,7 @@ const Home = () => {
             <div className="info">
               <h1>Tahmid Hasan Pranto</h1>
               <i><h3>M.S. in Computer Science (USA)</h3></i>
-              <i><h3>B.Sc. in Computer Science & Engineering (Bangladesh) </h3></i>
+              <i><h3>B.Sc. in Computer Science & Engineering (Bangladesh)</h3></i>
 
               {/* Location */}
               <h3>
@@ -43,35 +45,49 @@ const Home = () => {
                 </button>
               </a>
             </div>
-
           </div>
 
+          {/* Right column – bio, interests, education, profiles */}
           <div className="col-md-7 col-sm-12 index-info">
-            <h2 className="any-heading-marginless">About Me</h2>
-            <div className="introduction">
-              <p>
-                Hello, I’m Tahmid Hasan Pranto. I recently completed my Master of Science in Computer Science 
-                at Oregon State University, Corvallis, OR, USA, where I also served as a Graduate Research and 
-                Teaching Assistant. Earlier, I earned my B.Sc. in Computer Science and Engineering from North 
-                South University (NSU), Dhaka, Bangladesh. I was honored to graduate Cum Laude in both my 
-                undergraduate and master’s studies.
-              </p>
+            
+            {/* Biography */}
+            <h2 className="any-heading-marginless">Biography</h2>
+            <p className="introduction">
+              I am Tahmid Hasan Pranto. I recently completed my Master of Science in Computer Science 
+              at Oregon State University, Corvallis, OR, USA, where I also served as a Graduate Research 
+              and Teaching Assistant. Earlier, I earned my B.Sc. in Computer Science and Engineering 
+              from North South University (NSU), Dhaka, Bangladesh. I graduated <i>Cum Laude</i> in both degrees. 
+              My research interests broadly include machine learning, robustness, and secure AI systems.
+            </p>
 
-              <p>
-                My academic and research experiences so far have allowed me to explore different areas of machine 
-                learning and artificial intelligence, including topics such as adversarial robustness, deep learning 
-                for vision, and secure AI system deployment. My recent research has focused on the challenges of making 
-                AI models resilient to bit-level corruption in their parameters.
-              </p>
+            {/* Interests + Education side by side */}
+            <div className="row mt-4">
+              <div className="col-md-6">
+                <h3 className="section-subheading">Interests</h3>
+                <ul className="list-unstyled">
+                  <li>Adversarial robustness</li>
+                  <li>Deep learning for vision</li>
+                  <li>Secure AI system deployment</li>
+                  <li>Distributed / federated learning</li>
+                </ul>
+              </div>
 
-              <p>
-                Outside of academics, I enjoy spending time with classic films and music—both of which give me fresh 
-                perspectives and balance in life. I see my graduate journey as a step toward learning more, asking better 
-                questions, and contributing meaningfully to the field of computer science.
-              </p>
-              
+              <div className="col-md-6">
+                <h3 className="section-subheading">Education</h3>
+                <ul className="list-unstyled">
+                  <li>
+                    🎓 M.S. in Computer Science, 2025<br />
+                    <span className="text-muted lil-margin">Oregon State University, USA</span>
+                  </li>
+                  <li>
+                    🎓 B.Sc. in Computer Science & Engineering, 2021<br />
+                    <span className="text-muted lil-margin">North South University, Bangladesh</span>
+                  </li>
+                </ul>
+              </div>
             </div>
 
+            
             <h2 className="prof-heading any-heading-marginless">Profiles</h2>
             <div className="row profiles-containers text-center">
               <div className="col-md-3 col-sm-6 profile-wrap text-center">
@@ -107,7 +123,9 @@ const Home = () => {
                 </a>
               </div>
             </div>
+
           </div>
+
         </div>
       </div>
     </div>

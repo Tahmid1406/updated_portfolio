@@ -1,75 +1,82 @@
-import React from 'react';
+import React from "react";
 
 const Projects = () => {
   const projectsData = [
     {
       title: "Human Activity Recognition Using Machine Learning Algorithms",
       course: "CSE 445 - Machine Learning",
-      description: "In this project we used cellphone sensor data (angular motion, acceleration, geographic location and tri-axial (3-d) motion data) to classify human activity. The activity has been classified for 6 classes and a total of 3 machine learning models have been tested on this dataset. SVC performs with a highest testing accuracy of 95% followed by logistic regression with testing accuracy of 82% followed by Ridge classifier CV with testing accuracy of 81%. For further investigation about the models performance, we showed the precision, recall, f1-score along with corresponding confusion matrix.",
-      github: "https://github.com/Tahmid1406/Human-Activity-Classification-Using-ML-Techniques",
+      description:
+        "Used cellphone sensor data (motion, GPS, acceleration) to classify six types of human activity. Compared multiple ML models, achieving 95% accuracy with SVC. Evaluation included precision, recall, F1-score, and confusion matrices.",
+      github:
+        "https://github.com/Tahmid1406/Human-Activity-Classification-Using-ML-Techniques",
       report: "./pdf/445.pdf",
-      image: "images/project/p3_2.png"
+      image: "images/project/p3_2.png",
+      tech: ["Python", "Scikit-learn", "SVC", "Logistic Regression"],
     },
     {
-      title: "SHOPLine | Augmented-Reality Based Cross Platform E-Commerce Application",
-      course: "Course: CSE327 - Software Engineering",
-      description: "The purpose of this project is to add a live camera 3D preview of the products that the customers buy from the online e-commerce sites. Our android version of the project will have this feature. User will just press a button and the camera will show a live 3d preview to the user. Which will make online shopping far more interesting and will hopefully attract more consumers.",
-      github: "https://github.com/Tahmid1406/SHOPLINE-E-Commerce-Platform-Web-Android-",
-      image: "images/ardemo.png"
-    }
+      title:
+        "SHOPLine | Augmented-Reality Based Cross Platform E-Commerce Application",
+      course: "CSE 327 - Software Engineering",
+      description:
+        "Developed a cross-platform e-commerce application with AR product previews. Integrated live 3D camera overlays on Android, enhancing user engagement and online shopping experience.",
+      github:
+        "https://github.com/Tahmid1406/SHOPLINE-E-Commerce-Platform-Web-Android-",
+      image: "images/ardemo.png",
+      tech: ["Java", "Android", "ARCore", "Firebase"],
+    },
   ];
 
   return (
-    <div className="project">
+    <section className="projects-section">
       <div className="container">
         <h2 className="any-heading">Projects</h2>
 
-        <div className="proj-outer-container">
-          <div className="row">
-            {projectsData.map((project, index) => (
-              <div key={index} className="col-md-6">
-                <div className="card project-card mb-5" style={{width: '90%'}}>
-                  <div className="text-center proj-img">
-                    <img 
-                      src={project.image} 
-                      className="card-img-top" 
-                      alt="Project Screenshot"
-                    />
-                  </div>
-                  <div className="card-body">
-                    <h5 className="card-title">{project.title}</h5>
-                    <p className="card-text">{project.course}</p>
-                    <p className="card-text">{project.description}</p>
-                    <div className="text-center mb-3 mt-4">
-                      <a 
-                        href={project.github} 
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                      >
-                        <button className={`any-btn project-btn-git ${index === 0 ? 'g1' : ''}`}>
-                          Github Code <i className="fas fa-chevron-right"></i>
-                        </button>
-                      </a>
-                      {project.report && (
-                        <a 
-                          href={project.report} 
-                          target="_blank" 
-                          rel="noopener noreferrer"
-                        >
-                          <button className="any-btn project-btn-report">
-                            Project Report <i className="fas fa-download"></i>
-                          </button>
-                        </a>
-                      )}
-                    </div>
-                  </div>
+        <div className="projects-list">
+          {projectsData.map((project, index) => (
+            <div key={index} className="project-entry">
+              <div className="project-image">
+                <img src={project.image} alt={project.title} />
+              </div>
+
+              <div className="project-content">
+                <h3 className="project-title">{project.title}</h3>
+                <p className="project-course">{project.course}</p>
+                <p className="project-desc">{project.description}</p>
+
+                <div className="project-tech">
+                  {project.tech.map((t, i) => (
+                    <span key={i} className="tech-badge">
+                      {t}
+                    </span>
+                  ))}
+                </div>
+
+                <div className="project-links">
+                  <a
+                    href={project.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="proj-btn"
+                  >
+                    GitHub <i className="fab fa-github"></i>
+                  </a>
+                  {project.report && (
+                    <a
+                      href={project.report}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="proj-btn secondary"
+                    >
+                      Report <i className="fas fa-file-pdf"></i>
+                    </a>
+                  )}
                 </div>
               </div>
-            ))}
-          </div>
+            </div>
+          ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
