@@ -754,14 +754,13 @@ h1, h2, h3 {
 
 
 
+
+
+
+
+
 /* css for the project page */
-:root {
-  --blue: #4663ac;
-  --text: rgba(0, 0, 0, 0.85);
-  --muted: rgba(0, 0, 0, 0.65);
-  --border: #e6e9f0;
-  --bg-light: #f9f9fb;
-}
+
 
 
 .projects-section h2 {
@@ -897,6 +896,10 @@ h1, h2, h3 {
     width: 100%;
   }
 }
+
+
+
+
 
 
 
@@ -1061,7 +1064,7 @@ h1, h2, h3 {
 }
 
 .cert-title {
-  font-size: 1.3rem; /* bigger */
+  font-size: 1.4rem; /* bigger */
   font-weight: 600;
   color: #1e293b;
   margin-bottom: 0.6rem;
@@ -1069,14 +1072,14 @@ h1, h2, h3 {
 }
 
 .cert-issuer {
-  font-size: 1.05rem;
+  font-size: 1.2rem;
   font-weight: 500;
   color: #475569;
   margin-bottom: 0.4rem;
 }
 
 .cert-date {
-  font-size: 0.95rem;
+  font-size: 1.1rem;
   color: #64748b;
   margin-bottom: 1rem;
 }

@@ -7,77 +7,84 @@ const Certification = () => {
       issuer: "Coursera (Andrew Ng) | Stanford University",
       date: "July 2021",
       url: "https://www.coursera.org/account/accomplishments/certificate/B95AQFLK48VS",
-      image: "/images/1.png"
+      image: "/images/certificate_machine_learning.png"
     },
     {
       title: "Convolutional Neural Networks",
       issuer: "Coursera | Deeplearning.AI",
       date: "October 2021",
       url: "https://www.coursera.org/account/accomplishments/certificate/BBLRU89H57GE",
-      image: "/images/3.png"
+      image: "/images/certificate_cnn.png"
     },
     {
       title: "Generative AI with Diffusion Models",
       issuer: "AWS Training and Certification",
       date: "July 2025",
       url: "https://skillbuilder.aws/learn/62GE2Q9GRY/generative-ai-with-diffusion-models/VMVJE9NMQ7",
-      image: "/images/GenAI_with_diffusion.png"
+      image: "/images/certificate_GenAI_with_diffusion.png"
     },
     {
       title: "AWS Certified Cloud Practitioner",
       issuer: "Amazon Web Services Training and Certification",
       date: "July 2025",
       url: "https://www.credly.com/badges/6fcf0c54-58c7-438d-b8f9-0816f858e9d5",
-      image: "/images/aws_cp.png"
+      image: "/images/certificate_aws_cp.png"
     },
     {
       title: "LangChain for LLM Application Development",
       issuer: "Deeplearning.AI",
       date: "May 2025",
       url: "https://learn.deeplearning.ai/accomplishments/ede34006-0edd-4ba0-bbdc-3c13dd30d67d?usp=sharing",
-      image: "/images/langchain.png"
+      image: "/images/certificate_langchain.png"
     },
     {
       title: "LangChain Chat with Your Data",
       issuer: "Deeplearning.AI",
       date: "May 2025",
       url: "https://learn.deeplearning.ai/accomplishments/f6d0f1b8-1b88-4094-906f-0fad2a628233?usp=sharing",
-      image: "/images/Langchain_chat.png"
+      image: "/images/certificate_Langchain_chat.png"
     },
     {
       title: "Neural Networks and Deep Learning",
       issuer: "Coursera | Deeplearning.AI",
       date: "July 2021",
       url: "https://www.coursera.org/account/accomplishments/certificate/B95AQFLK48VS",
-      image: "/images/4.png"
+      image: "/images/certificate_NNandDL.png"
     },
     {
-      title: "Improving Deep Neural Networks",
+      title: "Improving Deep Neural Networks: Hyperparameter tuning, Regularization and Optimization",
       issuer: "Coursera | Deeplearning.AI",
       date: "June 2021",
       url: "https://www.coursera.org/account/accomplishments/certificate/TAW24L4MLEWG",
-      image: "/images/2.png"
+      image: "/images/certificate_improve_dnn.png"
     },
     {
       title: "Structuring Machine Learning Projects",
       issuer: "Coursera | Deeplearning.AI",
       date: "August 2021",
       url: "https://www.coursera.org/account/accomplishments/certificate/FNN7QHRTKZUT",
-      image: "/images/5.png"
+      image: "/images/certificate_structure_ML_project.png"
     }, 
     {
       title: "Responsible Artificial Intelligence Practices",
       issuer: "AWS Training and Certification",
       date: "July 2025",
       url: "https://skillbuilder.aws/learn/1H631ZWCTP/responsible-artificial-intelligence-practices/BN51NEFJNG",
-      image: "/images/Responsible_Ai.png"
+      image: "/images/certificate_Responsible_Ai.png"
     },
     {
       title: "Foundations of Prompt Engineering",
       issuer: "AWS Training and Certification",
       date: "July 2025",
       url: "https://skillbuilder.aws/learn/VF6H4SZ1BU/foundations-of-prompt-engineering/7U8XFUVXDT",
-      image: "/images/foundation_of_prompt.png"
+      image: "/images/certificate_foundation_of_prompt.png"
+    }, 
+    {
+      title: "Planning Machine Learning Projects",
+      issuer: "AWS Training and Certification",
+      date: "July 2025",
+      url: "https://skillbuilder.aws/learn/GVZ97Y7P5R/planning-a-machine-learning-project/FPEBEWNEJA",
+      image: "/images/certificate_planning_ml_project.png"
     }
   ];
 

@@ -19,7 +19,7 @@ const Navbar = ({ activeSection, setActiveSection }) => {
     { id: 'publications', label: 'Publications' },
     { id: 'skills', label: 'Skills' },
     { id: 'experience', label: 'Experience' },
-    { id: 'projects', label: 'Projects' },
+    { id: 'projects', label: 'Research & Projects' },
     { id: 'certifications', label: 'Certification' },
     { id: 'thesis', label: 'Thesis' },
     // { id: 'blog', label: 'Blog' },
