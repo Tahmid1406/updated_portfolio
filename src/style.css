@@ -908,66 +908,64 @@ h1, h2, h3 {
 
 /* ===== Thesis Section ===== */
 
-/* Distinguishable Blocks */
-.thesis-block {
-  margin-bottom: 4rem;
-  padding: 2rem;
-  border-radius: 12px;
-}
-
-/* Thesis Divider */
-.thesis-divider {
-  width: 100%;
-  height: 1px;
-  background: #e5e7eb;   /* light gray line, subtle */
-  margin: 4rem 0;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05); /* soft shadow like Experience page */
-}
-
-
-.thesis-ms {
-  background: #f0f4ff; /* light bluish */
-}
-
-.thesis-bsc {
-  background: #f9f9fb; /* light gray */
-}
-
-/* Professional Gallery */
-.thesis-gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1.5rem;
-  margin-bottom: 2rem;
-}
-
-.gallery-item {
-  background: #fff;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+/* Slideshow */
+.thesis-slideshow {
+  position: relative;
+  max-width: 700px;
+  margin: 2rem auto;
+  border-radius: 10px;
   overflow: hidden;
-  transition: transform 0.3s ease;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
 }
 
-.gallery-item:hover {
-  transform: translateY(-4px);
-}
-
-.gallery-item img {
+.thesis-slideshow img {
   width: 100%;
-  height: 180px;
+  height: 380px;
   object-fit: cover;
   display: block;
 }
 
-.gallery-caption {
-  font-size: 0.9rem;
+.slideshow-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.55);
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 500;
   text-align: center;
   padding: 0.8rem;
-  color: #475569;
-  font-style: italic;
-  border-top: 1px solid #e5e7eb;
 }
+
+/* Font visibility improvements */
+.thesis-title {
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.thesis-meta {
+  font-size: 1.1rem;
+  color: #374151;
+}
+
+.detail-box h3 {
+  font-size: 1.3rem;
+  color: var(--blue);
+  margin-bottom: 0.5rem;
+}
+
+.detail-box p {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #1e293b;
+}
+.thesis-divider {
+  margin: 5rem 0;   /* a bit more breathing space */
+  background: #cbd5e1; /* slightly darker gray */
+}
+
 
 
 
@@ -1014,65 +1012,45 @@ h1, h2, h3 {
 
 
 /* css for the certificate page */
-/* Section */
-.certification {
-  background: #f8fafc;
-}
-
-.certification .container {
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-/* Heading */
-.certification .any-heading {
-  font-size: 2.5rem;
-  font-weight: 700;
-  color: #1e293b;
-  text-align: center;
-  margin-bottom: 3rem;
-  position: relative;
-}
-
-
 /* Grid */
 .cert-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); /* larger min width */
+  gap: 2.5rem; /* more breathing space */
 }
 
 /* Individual card */
 .cert-card {
   display: flex;
   flex-direction: column;
-  background: white;
+  background: #fff;
   border: 1px solid #e2e8f0;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  border-radius: 14px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
   transition: all 0.3s ease;
   overflow: hidden;
-  padding: 1.5rem;
+  padding: 2rem; /* more padding */
 }
 
 .cert-card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.12);
 }
 
 /* Thumbnail */
 .cert-thumb {
   flex: 0 0 auto;
-  margin-bottom: 1rem;
+  margin-bottom: 1.2rem;
   text-align: center;
 }
 
 .cert-thumb img {
-  max-height: 120px;
+  max-height: 160px; /* bigger preview */
   width: auto;
-  border-radius: 6px;
+  border-radius: 8px;
   border: 1px solid #e2e8f0;
   object-fit: contain;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
 }
 
 /* Body */
@@ -1083,52 +1061,59 @@ h1, h2, h3 {
 }
 
 .cert-title {
-  font-size: 1.1rem;
+  font-size: 1.3rem; /* bigger */
   font-weight: 600;
   color: #1e293b;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.6rem;
+  line-height: 1.4;
 }
 
 .cert-issuer {
-  font-size: 0.95rem;
+  font-size: 1.05rem;
+  font-weight: 500;
   color: #475569;
-  margin-bottom: 0.25rem;
+  margin-bottom: 0.4rem;
 }
 
 .cert-date {
-  font-size: 0.85rem;
+  font-size: 0.95rem;
   color: #64748b;
-  margin-bottom: auto; /* pushes the button to the bottom */
+  margin-bottom: 1rem;
 }
 
-/* Action (verify button fixed under date) */
+/* Action button */
 .cert-action {
-  margin-top: 1rem;
+  margin-top: auto;
 }
 
 .cert-btn {
   background: linear-gradient(135deg, var(--blue), #3b82f6);
   color: white;
-  padding: 0.6rem 1.2rem;
-  border-radius: 25px;
-  font-size: 0.85rem;
+  padding: 0.7rem 1.5rem;
+  border-radius: 30px;
+  font-size: 0.95rem;
   font-weight: 600;
   text-decoration: none;
+  text-align: center;
   transition: all 0.3s ease;
   display: inline-block;
 }
 
 .cert-btn:hover {
   background: linear-gradient(135deg, #1d4ed8, #2563eb);
-  transform: translateY(-2px);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
 }
 
-/* Responsive */
-@media (max-width: 576px) {
+/* Responsive improvements */
+@media (max-width: 768px) {
   .cert-title {
-    font-size: 1rem;
+    font-size: 1.1rem;
   }
   .cert-issuer {
+    font-size: 0.95rem;
+  }
+  .cert-date {
     font-size: 0.85rem;
   }
 }
@@ -1148,17 +1133,15 @@ h1, h2, h3 {
 
 
 
-/* ------- Section ------- */
 
-.ex-heading {
-  font-size: 2rem;
-  font-weight: 600;
-  color: var(--blue);
-  margin-bottom: 2.5rem;
-  text-align: center;
-}
 
-/* ------- Experience List ------- */
+
+
+
+
+
+
+/* -------CSS for the Experience Section ------- */
 .experience-list {
   display: flex;
   flex-direction: column;
@@ -1168,65 +1151,100 @@ h1, h2, h3 {
 /* ------- Single Entry ------- */
 .experience-entry {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   border-bottom: 1px solid var(--border);
   padding-bottom: 1.5rem;
-}
-
-.exp-meta {
-  flex: 0 0 70px;
-  margin-right: 1.5rem;
+  gap: 1.5rem;
 }
 
 .exp-meta img {
-  max-width: 60px;
-  max-height: 60px;
+  max-width: 50px;
+  max-height: 50px;
   object-fit: contain;
-  /* filter: grayscale(100%);  👈 remove this */
   transition: transform 0.3s ease;
 }
 
 .experience-entry:hover .exp-meta img {
-  /* filter: grayscale(0%);  👈 remove this */
-  transform: scale(1.05); /* subtle hover zoom instead */
+  transform: scale(1.05);
 }
 
+.exp-details {
+  flex: 1;
+}
+
+.exp-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
 
 .exp-details h4 {
   font-size: 1.2rem;
   font-weight: 600;
-  margin: 0 0 0.3rem;
+  margin: 0;
   color: var(--dark);
 }
 
 .exp-details h5 {
   font-size: 1rem;
   font-weight: 500;
-  margin: 0 0 0.3rem;
+  margin: 0.3rem 0;
   color: var(--text);
 }
 
 .exp-period {
   display: inline-block;
-  font-size: 0.9rem;
-  color: var(--muted);
-  background: #f2f5fa;
-  padding: 0.2rem 0.6rem;
-  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--blue);              
+  background: #e8f0fd;            
+  padding: 0.25rem 0.8rem;
+  border-radius: 12px;
   margin-top: 0.3rem;
 }
 
-/* ------- Responsive ------- */
+
+/* Responsibilities list */
+.exp-responsibilities {
+  margin-top: 0.5rem;
+  list-style: none;
+  padding-left: 1rem;
+}
+
+.exp-responsibilities li {
+  font-size: 0.95rem;
+  color: var(--text);
+  margin-bottom: 0.4rem;
+  position: relative;
+}
+
+.exp-responsibilities li::before {
+  content: "•";
+  position: absolute;
+  left: -0.8rem;
+  color: var(--blue);
+}
+
+/* Responsive */
 @media (max-width: 768px) {
   .experience-entry {
     flex-direction: column;
     align-items: flex-start;
   }
 
-  .exp-meta {
-    margin-bottom: 0.8rem;
+  .exp-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.3rem;
+  }
+
+  .exp-period {
+    margin-left: 0;
   }
 }
+
+
+
 
 
 

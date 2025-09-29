@@ -3,24 +3,29 @@ import React from 'react';
 const Skills = () => {
   const skillsData = [
     {
-      category: "Machine Learning API",
+      category: "ML/DL/LLM Skills",
       icon: "fas fa-robot",
-      skills: ["Pytorch", "Tensorflow"]
+      skills: ["Pytorch", "Tensorflow", "LangChain", "RAG", "HuggingFace", "ChromaDB", "Transformers", "ViTs"]
     },
     {
-      category: "Programming",
+      category: "Programming and Scripting",
       icon: "fas fa-terminal",
-      skills: ["Java", "C/C++"]
+      skills: ["Java", "C/C++", "Python", "Javascript", "SQL", "MATLAB", "Latex", "Bash"]
     },
     {
-      category: "Scripting Language",
+      category: "Data Science & Visualization",
       icon: "fas fa-file-code",
-      skills: ["Python", "Javascript", "PHP"]
+      skills: ["Pandas", "NumPy", "Matplotlib", "Seaborn", "SciPy"]
     },
     {
-      category: "Markup Language",
+      category: "Web and Cloud",
       icon: "fa fa-code",
-      skills: ["HTML", "CSS", "XML", "LaTex"]
+      skills: ["AWS", "React.js", "FastAPI", "Django", "REST APIs", "Git", "Docker"]
+    },
+    {
+      category: "Tools and Productivity",
+      icon: "fa fa-code",
+      skills: ["HPC", "Parallalization", "Linux", "MS Office", "Trello"]
     },
     {
       category: "Dev Environment",
