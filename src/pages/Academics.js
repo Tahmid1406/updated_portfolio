@@ -39,7 +39,11 @@ const Academics = () => {
         <div className="academic-roadmap">
           {academicData.map((item, index) => (
             <div key={index} className="roadmap-item">
-              <img src={item.logo} alt={item.institution} className="roadmap-logo" />
+              <img 
+                src={process.env.PUBLIC_URL + item.logo} 
+                alt={item.institution} 
+                className="roadmap-logo" 
+              />
               <div className="roadmap-content">
                 <h3>{item.degree}</h3>
                 <p>{item.institution}</p>

@@ -6,7 +6,7 @@ const Experience = () => {
       position: "Internship - Junior Machine Learning Engineering",
       organization: "LegoIO LLC",
       period: "Jun 2025 – Aug 2025",
-      logo: "./images/legoio.jpeg",
+      logo: "/images/legoio.jpeg",
       responsibilities: [
         "Gained hands-on experience with production-scale AI deployment pipelines, learning best practices for scaling machine learning models into real-world applications.",
         "Explored cloud services (AWS EC2, S3, SageMaker) to support model training, storage, and deployment workflows.",
@@ -18,7 +18,7 @@ const Experience = () => {
       position: "Graduate Research Assistant",
       organization: "EECS Department, Oregon State University",
       period: "Apr 2024 – Mar 2025",
-      logo: "./images/osu.png",
+      logo: "/images/osu.png",
       responsibilities: [
         "Collaborated with research team and attended weekly meetings to discuss progress and challenges.",
         "Designed and implemented Hessian-aware training algorithms to improve resilience of deep neural networks against parameter-level bit-flip attacks.",
@@ -31,7 +31,7 @@ const Experience = () => {
       position: "Graduate Teaching Assistant",
       organization: "EECS Department, Oregon State University",
       period: "Aug 2023 – Mar 2024",
-      logo: "./images/osu.png",
+      logo: "/images/osu.png",
       responsibilities: [
         "Assisted in teaching and grading for CS374 (Operating Systems), supporting a class of 150+ students.",
         "Held weekly office hours to explain course material, resolve student queries, and provide guidance on assignments.",
@@ -43,11 +43,7 @@ const Experience = () => {
       position: "Senior Research Assistant",
       organization: "ECE Department, North South University",
       period: "January 2022 – Sep 2023",
-      logo: "./images/nsu.png",
-      position: "Senior Research Assistant",
-      organization: "ECE Department, North South University",
-      period: "January 2022 – Sep 2023",
-      logo: "./images/nsu.png",
+      logo: "/images/nsu.png",
       responsibilities: [
         "Conducted research on semantic segmentation of high-resolution satellite imagery, analyzing the impact of label noise on deep learning models (U-Net) for marine sedimentation studies.",
         "Developed decentralized applications combining blockchain and machine learning, including federated learning frameworks for e-commerce and medical diagnostics.",
@@ -59,7 +55,7 @@ const Experience = () => {
       position: "Research Assistant",
       organization: "ECE Department, North South University",
       period: "May 2021 – December 2021",
-      logo: "./images/nsu.png",
+      logo: "/images/nsu.png",
       responsibilities: [
         "Worked on semantic segmentation of satellite imagery with deep learning.",
         "Prepared experimental pipelines and data preprocessing workflows.",
@@ -70,9 +66,9 @@ const Experience = () => {
       position: "Software Engineering Intern",
       organization: "Worklife",
       period: "June 2021 – August 2021",
-      logo: "./images/worklife.png",
+      logo: "/images/worklife.png",
       responsibilities: [
-        "Built and maintained backend APIs for an productivity application called worklife.",
+        "Built and maintained backend APIs for a productivity application called Worklife.",
         "Implemented frontend features using React.js.",
         "Collaborated with senior engineers on debugging and deployment."
       ]
@@ -88,7 +84,7 @@ const Experience = () => {
           {experienceData.map((exp, index) => (
             <div key={index} className="experience-entry">
               <div className="exp-meta">
-                <img src={exp.logo} alt={exp.organization} />
+                <img src={process.env.PUBLIC_URL + exp.logo} alt={exp.organization} />
               </div>
               <div className="exp-details">
                 <h4>{exp.position}</h4>

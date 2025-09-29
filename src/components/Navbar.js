@@ -39,7 +39,8 @@ const Navbar = ({ activeSection, setActiveSection }) => {
           onClick={() => handleNavClick('home')}
           style={{ cursor: 'pointer' }}
         >
-          <img src="./images/tahmid.png" alt="Tahmid" />
+          <img src={process.env.PUBLIC_URL + "/images/tahmid.png"} alt="Tahmid" />
+
         </div>
 
         {/* Desktop Nav */}

@@ -69,32 +69,34 @@ const Publications = () => {
   ];
 
   return (
-    <div className="publication">
+    <section className="publication">
       <div className="container">
         <h2 className="any-heading-marginless">Publications</h2>
 
-        {publicationsData.map((pub, index) => (
-          <div key={index} className="card mb-5">
-            <div className="card-body blog-card">
-              <div className="pub-float">
-                <span className="pub-year">{pub.year}</span> <br />
-                <span className="pub-type">{pub.type}</span>
-              </div>
-              <div className="pub-info">
-                <h3>{pub.title}</h3>
-                <p><i>{pub.authors}</i></p>
-                <p>{pub.journal}</p>
-                <a href={pub.url} target="_blank" rel="noopener noreferrer">
-                  <button className="pub-butn">
-                    Read More <i className="fas fa-chevron-right"></i>
-                  </button>
-                </a>
+        <div className="publications-list">
+          {publicationsData.map((pub, index) => (
+            <div key={index} className="card mb-5">
+              <div className="card-body blog-card">
+                <div className="pub-float">
+                  <span className="pub-year">{pub.year}</span> <br />
+                  <span className="pub-type">{pub.type}</span>
+                </div>
+                <div className="pub-info">
+                  <h3>{pub.title}</h3>
+                  <p><i>{pub.authors}</i></p>
+                  <p>{pub.journal}</p>
+                  <a href={pub.url} target="_blank" rel="noopener noreferrer">
+                    <button className="pub-butn">
+                      Read More <i className="fas fa-chevron-right"></i>
+                    </button>
+                  </a>
+                </div>
               </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
-    </div>
+    </section>
   );
 };
 

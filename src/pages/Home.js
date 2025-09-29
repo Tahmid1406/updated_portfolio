@@ -10,7 +10,7 @@ const Home = () => {
           <div className="col-md-5 col-sm-12 personal-information">
             <div>
               <img 
-                src="images/pic.jpg" 
+                src={process.env.PUBLIC_URL + "/images/pic.jpg"} 
                 alt="profile image" 
                 className="home-pro-img" 
               />

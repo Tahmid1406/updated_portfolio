@@ -2,12 +2,12 @@ import React, { useState, useEffect } from "react";
 
 const Thesis = () => {
   const bachelorThesisImages = [
-    { src: "images/thesis/1.png", title: "Study Area" },
-    { src: "images/thesis/2.png", title: "Satellite Image Rasterization" },
-    { src: "images/thesis/3.png", title: "Gaussian Noise Injection" },
-    { src: "images/thesis/4.png", title: "Model Prediction" },
-    { src: "images/thesis/5.png", title: "Loss Function vs Epoch" },
-    { src: "images/thesis/6.png", title: "Dice Coefficient vs Epoch" }
+    { src: process.env.PUBLIC_URL + "/images/thesis/1.png", title: "Study Area" },
+    { src: process.env.PUBLIC_URL + "/images/thesis/2.png", title: "Satellite Image Rasterization" },
+    { src: process.env.PUBLIC_URL + "/images/thesis/3.png", title: "Gaussian Noise Injection" },
+    { src: process.env.PUBLIC_URL + "/images/thesis/4.png", title: "Model Prediction" },
+    { src: process.env.PUBLIC_URL + "/images/thesis/5.png", title: "Loss Function vs Epoch" },
+    { src: process.env.PUBLIC_URL + "/images/thesis/6.png", title: "Dice Coefficient vs Epoch" }
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -26,23 +26,13 @@ const Thesis = () => {
         {/* Master’s Thesis */}
         <h2 className="any-heading-marginless">Master’s Thesis</h2>
         <div className="thesis-block thesis-ms">
-          {/* keep contents as-is, you can replace later */}
           <div className="thesis-hero">
-            <h3 className="thesis-title">
-              [Your MS Thesis Title Goes Here]
-            </h3>
-            <p className="thesis-meta">
-              <b>Course:</b> M.S. in Computer Science
-            </p>
+            <h3 className="thesis-title">[Your MS Thesis Title Goes Here]</h3>
+            <p className="thesis-meta"><b>Course:</b> M.S. in Computer Science</p>
             <p className="thesis-meta">
               <b>Supervisor:</b> [Supervisor Name] |{" "}
-              <a href="#" target="_blank" rel="noopener noreferrer">
-                Profile
-              </a>{" "}
-              |{" "}
-              <a href="#" target="_blank" rel="noopener noreferrer">
-                Google Scholar
-              </a>
+              <a href="#" target="_blank" rel="noopener noreferrer">Profile</a> |{" "}
+              <a href="#" target="_blank" rel="noopener noreferrer">Google Scholar</a>
             </p>
           </div>
 
@@ -91,26 +81,11 @@ const Thesis = () => {
             <h3 className="thesis-title">
               Effect of Label Noise in Patch-wise Multi-class Semantic Segmentation
             </h3>
-            <p className="thesis-meta">
-              <b>Course:</b> CSE499 - Senior Design Project
-            </p>
+            <p className="thesis-meta"><b>Course:</b> CSE499 - Senior Design Project</p>
             <p className="thesis-meta">
               <b>Supervisor:</b> Dr. Mohammad Rashedur Rahman |{" "}
-              <a
-                href="http://ece.northsouth.edu/people/rashedur-rahman/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                NSU Profile
-              </a>{" "}
-              |{" "}
-              <a
-                href="https://scholar.google.ca/citations?user=L9S6rlUAAAAJ&hl=en"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Google Scholar
-              </a>
+              <a href="http://ece.northsouth.edu/people/rashedur-rahman/" target="_blank" rel="noopener noreferrer">NSU Profile</a> |{" "}
+              <a href="https://scholar.google.ca/citations?user=L9S6rlUAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Google Scholar</a>
             </p>
           </div>
 
@@ -155,7 +130,7 @@ const Thesis = () => {
                 GitHub Code <i className="fab fa-github"></i>
               </button>
             </a>
-            <a href="./pdf/499.pdf" target="_blank" rel="noopener noreferrer">
+            <a href={process.env.PUBLIC_URL + "/pdf/499.pdf"} target="_blank" rel="noopener noreferrer">
               <button className="butn">
                 Project Report <i className="fas fa-file-pdf"></i>
               </button>
