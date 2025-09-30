@@ -14,11 +14,11 @@ const Navbar = ({ activeSection, setActiveSection }) => {
   }, [darkMode]);
 
   const navigationItems = [
-    { id: 'home', label: 'Home' },
-    { id: 'academics', label: 'Academics' },
+    // { id: 'home', label: 'Home' },
+    { id: 'experience', label: 'Experience' },
+    // { id: 'academics', label: 'Academics' },
     { id: 'publications', label: 'Publications' },
     { id: 'skills', label: 'Skills' },
-    { id: 'experience', label: 'Experience' },
     { id: 'projects', label: 'Research & Projects' },
     { id: 'certifications', label: 'Certification' },
     { id: 'thesis', label: 'Thesis' },
@@ -43,6 +43,15 @@ const Navbar = ({ activeSection, setActiveSection }) => {
 
         </div>
 
+        {/* Dark Mode Toggle */}
+          <button 
+            className="dark-toggle" 
+            onClick={() => setDarkMode(!darkMode)}
+            aria-label="Toggle Dark Mode"
+          >
+            {darkMode ? '🌙' : '☀️'}
+          </button>
+
         {/* Desktop Nav */}
         <ul className={`nav-links ${isMenuOpen ? 'open' : ''}`}>
           {navigationItems.map((item) => (
@@ -66,14 +75,7 @@ const Navbar = ({ activeSection, setActiveSection }) => {
             <a href="https://github.com/Tahmid1406" target="_blank" rel="noopener noreferrer"><i className="fab fa-github"></i></a>
           </div>
 
-          {/* Dark Mode Toggle */}
-          <button 
-            className="dark-toggle" 
-            onClick={() => setDarkMode(!darkMode)}
-            aria-label="Toggle Dark Mode"
-          >
-            {darkMode ? '🌙' : '☀️'}
-          </button>
+          
         </div>
 
         {/* Mobile toggle */}

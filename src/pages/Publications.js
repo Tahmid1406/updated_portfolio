@@ -3,6 +3,15 @@ import React from 'react';
 const Publications = () => {
   const publicationsData = [
     {
+      year: 2025,
+      type: "Conference",
+      title: "Hessian-aware Training for Enhancing DNN Resilience to Bitwise Corruptions in Their Parameters",
+      authors: "Tahmid Hasan Pranto, Seijoon Kim, Lizhong Chen, Sanghyun Hong",
+      journal: "Submitted to TMLR",
+      url: "#",
+      tag: "Submitted to TMLR"
+    },
+    {
       year: 2023,
       type: "Journal",
       title: "Blockchain for medical collaboration: A federated learning-based approach for multi-class respiratory disease classification",
@@ -80,6 +89,9 @@ const Publications = () => {
                 <div className="pub-float">
                   <span className="pub-year">{pub.year}</span> <br />
                   <span className="pub-type">{pub.type}</span>
+                  {pub.tag && (
+                    <span className="pub-tag">{pub.tag}</span>
+                  )}
                 </div>
                 <div className="pub-info">
                   <h3>{pub.title}</h3>
@@ -87,7 +99,7 @@ const Publications = () => {
                   <p>{pub.journal}</p>
                   <a href={pub.url} target="_blank" rel="noopener noreferrer">
                     <button className="pub-butn">
-                      Read More <i className="fas fa-chevron-right"></i>
+                      Visit Publication Site <i className="fas fa-chevron-right"></i>
                     </button>
                   </a>
                 </div>

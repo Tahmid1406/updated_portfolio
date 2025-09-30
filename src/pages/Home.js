@@ -3,6 +3,11 @@ import React from 'react';
 const Home = () => {
   return (
     <div className="home" id="home">
+      {/* Update Notice */}
+        <div className="update-notice">
+          <i className="fas fa-info-circle"></i>
+          This website is updated every few months. Last updated: Sept 2025.
+        </div>
       <div className="container">
         <div className="row">
           
@@ -17,7 +22,7 @@ const Home = () => {
             </div>
 
             <div className="info">
-              <h1>Tahmid Hasan Pranto</h1>
+              <h1 className='name'>Tahmid Hasan Pranto</h1>
               <i><h3>M.S. in Computer Science (USA)</h3></i>
               <i><h3>B.Sc. in Computer Science & Engineering (Bangladesh)</h3></i>
 
@@ -39,11 +44,16 @@ const Home = () => {
                 tahmidpranto1406@gmail.com
               </h3>
 
-              <a href="./pdf/cv.pdf" target="_blank" rel="noopener noreferrer">
+              <a 
+                href={process.env.PUBLIC_URL + "/pdf/cv.pdf"} 
+                target="_blank" 
+                rel="noopener noreferrer"
+              >
                 <button className="any-btn cv-btn">
                   Download CV <i className="fas fa-download"></i>
                 </button>
               </a>
+
             </div>
           </div>
 
@@ -63,16 +73,6 @@ const Home = () => {
             {/* Interests + Education side by side */}
             <div className="row mt-4">
               <div className="col-md-6">
-                <h3 className="section-subheading">Interests</h3>
-                <ul className="list-unstyled">
-                  <li>Adversarial robustness</li>
-                  <li>Deep learning for vision</li>
-                  <li>Secure AI system deployment</li>
-                  <li>Distributed / federated learning</li>
-                </ul>
-              </div>
-
-              <div className="col-md-6">
                 <h3 className="section-subheading">Education</h3>
                 <ul className="list-unstyled">
                   <li>
@@ -83,6 +83,15 @@ const Home = () => {
                     🎓 B.Sc. in Computer Science & Engineering, 2021<br />
                     <span className="text-muted lil-margin">North South University, Bangladesh</span>
                   </li>
+                </ul>
+              </div>
+              <div className="col-md-6">
+                <h3 className="section-subheading">Interests</h3>
+                <ul className="list-unstyled">
+                  <li>Adversarial robustness</li>
+                  <li>Deep learning for vision</li>
+                  <li>Secure AI system deployment</li>
+                  <li>Distributed / federated learning</li>
                 </ul>
               </div>
             </div>

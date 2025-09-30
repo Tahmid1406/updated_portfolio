@@ -259,32 +259,35 @@ a:link {
 
 
 
-/* ----------------- HOME PAGE ----------------- */
-:root {
-  --blue: #4663ac;
-  --dark: #222;
-  --light: #f8f9fc;
-  --text: rgba(0, 0, 0, 0.8);
+
+
+
+
+
+
+
+
+
+/* --------------- Home Page CSS designs --------------- */
+
+.update-notice {
+  background: #f1f5f9;
+  color: #334155;
+  font-size: 1.2rem;
+  padding: 0.4rem 1.2rem;
+  border-radius: 6px;
+  margin: 0 auto;         
+  text-align: center;
+  max-width: 100%;            
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
 }
 
-/* --------------- GENERAL --------------- */
-body {
-  font-family: 'Inter', sans-serif;
-  background: #fff;
-  color: var(--text);
-  margin: 0;
-  padding: 0;
+.update-notice i {
+  margin-right: 8px;
+  color: var(--blue);
 }
 
-h1, h2, h3 {
-  margin: 0 0 1rem 0;
-  font-family: 'Poppins', sans-serif;
-}
 
-/* --------------- LAYOUT --------------- */
-.home {
-  margin-top: 4rem;
-}
 
 .home .container {
   display: flex;
@@ -328,7 +331,7 @@ h1, h2, h3 {
   background: var(--blue);
   color: #fff;
   padding: 0.6rem 1.8rem;
-  font-size: 15px;
+  font-size: 1.35rem;
   border: none;
   border-radius: 6px;
   margin-top: 1rem;
@@ -424,7 +427,7 @@ h1, h2, h3 {
 }
 
 .profile-wrap h3 {
-  font-size: 14px;
+  font-size: 1.35rem;
   font-weight: 500;
   margin: 0;
 }
@@ -487,16 +490,15 @@ h1, h2, h3 {
 }
 
 .roadmap-content h3 {
-  font-size: 1.6rem;
-  font-weight: 600;
-  font-family: var(--heading-font);
+  font-size: 1.5rem;
   color: var(--blue);
+  margin-bottom: 0.5rem;
 }
 
 .roadmap-content p {
-  font-size: 1.2rem;
-  font-family: var(--body-font);
-  color: rgba(0,0,0,0.7);
+  font-size: 1.3rem;
+  font-weight: 400;
+  margin: 0.2rem 0;
 }
 
 .roadmap-item {
@@ -506,7 +508,7 @@ h1, h2, h3 {
 }
 
 .roadmap-logo {
-  height: 60px;
+  height: 90px;
   margin-bottom: 1rem;
 }
 
@@ -520,16 +522,7 @@ h1, h2, h3 {
   z-index: 2;
 }
 
-.roadmap-content h3 {
-  font-size: 1.4rem;
-  color: var(--blue);
-  margin-bottom: 0.5rem;
-}
 
-.roadmap-content p {
-  font-size: 1.2rem;
-  margin: 0.2rem 0;
-}
 
 /* Responsive */
 @media (max-width: 768px) {
@@ -548,6 +541,10 @@ h1, h2, h3 {
   .roadmap-dot {
     margin: 0 1rem 0 0;
     display: inline-block;
+  }
+  .roadmap-logo {
+    height: 70px;
+    margin-bottom: 1rem;
   }
 }
 
@@ -573,6 +570,7 @@ h1, h2, h3 {
   border: none;
   border-radius: 10px;
   background: var(--light-gray);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
   transition: all 0.3s ease;
 }
 
@@ -592,6 +590,18 @@ h1, h2, h3 {
 .pub-float {
   flex: 0 0 120px;
   text-align: center;
+}
+
+.pub-tag {
+  display: inline-block;
+  margin-top: 0.8rem;
+  background: #fef3c7;   /* light amber */
+  color: #92400e;        /* dark amber text */
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 3px 10px;
+  border-radius: 12px;
+  text-transform: uppercase;
 }
 
 .pub-year {
@@ -620,7 +630,7 @@ h1, h2, h3 {
 }
 
 .pub-info h3 {
-  font-size: 1.4rem;
+  font-size: 1.45em;
   font-weight: 600;
   margin-bottom: 0.5rem;
   color: var(--dark);
@@ -628,7 +638,7 @@ h1, h2, h3 {
 
 .pub-info p {
   margin: 0.2rem 0;
-  font-size: 1.1rem;
+  font-size: 1.3rem;
   color: var(--text);
 }
 
@@ -643,7 +653,7 @@ h1, h2, h3 {
   color: #fff;
   border: none;
   padding: 0.5rem 1.2rem;
-  font-size: 0.9rem;
+  font-size: 1.05rem;
   border-radius: 6px;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -683,9 +693,21 @@ h1, h2, h3 {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* css for the skill page */
-
-
 .skill h2 {
   text-align: center;
   font-size: 2rem;
@@ -714,7 +736,7 @@ h1, h2, h3 {
 }
 
 .skill-type {
-  font-size: 1.3rem;
+  font-size: 1.45rem;
   font-weight: 600;
   color: #4663ac;
   margin-bottom: 1rem;
@@ -733,7 +755,7 @@ h1, h2, h3 {
 }
 
 .skill-box li {
-  font-size: 1rem;
+  font-size: 1.2rem;
   margin-bottom: 0.5rem;
   position: relative;
   padding-left: 1.2rem;
@@ -819,20 +841,20 @@ h1, h2, h3 {
 }
 
 .project-title {
-  font-size: 1.3rem;
+  font-size: 1.45rem;
   font-weight: 600;
   color: var(--text);
   margin-bottom: 0.4rem;
 }
 
 .project-course {
-  font-size: 0.95rem;
+  font-size: 1.2rem;
   color: var(--blue);
   margin-bottom: 1rem;
 }
 
 .project-desc {
-  font-size: 0.95rem;
+  font-size: 1.3rem;
   color: var(--muted);
   line-height: 1.6;
   margin-bottom: 1rem;
@@ -847,7 +869,7 @@ h1, h2, h3 {
   display: inline-block;
   background: #f1f4fa;
   color: var(--blue);
-  font-size: 0.8rem;
+  font-size: 0.95rem;
   padding: 4px 10px;
   border-radius: 6px;
   margin-right: 6px;
@@ -865,8 +887,8 @@ h1, h2, h3 {
 .proj-btn {
   background: var(--blue);
   color: #fff;
-  padding: 0.45rem 1rem;
-  font-size: 0.9rem;
+  padding: 0.55rem 1.2rem;
+  font-size: 1rem;
   border-radius: 6px;
   text-decoration: none;
   transition: background 0.3s ease, transform 0.2s ease;
@@ -874,6 +896,7 @@ h1, h2, h3 {
 
 .proj-btn:hover {
   background: #2f4b87;
+  color: #e5e7eb;
   transform: translateY(-2px);
 }
 
@@ -923,7 +946,7 @@ h1, h2, h3 {
 
 .thesis-slideshow img {
   width: 100%;
-  height: 380px;
+  height: 350px;
   object-fit: cover;
   display: block;
 }
@@ -943,6 +966,7 @@ h1, h2, h3 {
 
 /* Font visibility improvements */
 .thesis-title {
+  margin-top: 10px;
   font-size: 1.6rem;
   font-weight: 600;
   margin-bottom: 1rem;
@@ -960,13 +984,29 @@ h1, h2, h3 {
 }
 
 .detail-box p {
-  font-size: 1.05rem;
+  font-size: 1.2rem;
   line-height: 1.7;
   color: #1e293b;
 }
-.thesis-divider {
-  margin: 5rem 0;   /* a bit more breathing space */
-  background: #cbd5e1; /* slightly darker gray */
+
+.thesis-bsc-mt{
+  margin-top: 4rem;
+}
+
+.thesis-actions .proj-btn{
+  margin-right: 1rem;
+}
+
+.notice {
+  margin-right: 1rem;
+  color: #e67e22;              /* orange text */
+  font-weight: bold;
+  border: 1px solid #e67e22;   /* orange border */
+  background-color: #fffaf5;   /* soft orange background */
+  padding: 0.55rem 1.2rem;
+  font-size: 1rem;
+  border-radius: 6px;          /* rounded corners */
+  display: inline-block;       /* shrink wrap text */
 }
 
 
@@ -977,34 +1017,6 @@ h1, h2, h3 {
 
 
 
-
-
-
-
-.butn {
-    background-color: var(--blue);
-    color: #FFF;
-    padding: 0.8rem 2rem;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    margin: 0.5rem;
-    transition: all 0.3s ease;
-}
-
-.butn:hover {
-  background: #35529a;
-  transform: translateY(-2px);
-}
-
-.butn.secondary {
-  background: #6c757d;
-}
-
-.butn.secondary:hover {
-  background: #555d65;
-}
 
 
 
@@ -1079,7 +1091,7 @@ h1, h2, h3 {
 }
 
 .cert-date {
-  font-size: 1.1rem;
+  font-size: 1.125rem;
   color: #64748b;
   margin-bottom: 1rem;
 }
@@ -1092,9 +1104,9 @@ h1, h2, h3 {
 .cert-btn {
   background: linear-gradient(135deg, var(--blue), #3b82f6);
   color: white;
-  padding: 0.7rem 1.5rem;
+  padding: 0.55rem 1.5rem;
   border-radius: 30px;
-  font-size: 0.95rem;
+  font-size: 1rem;
   font-weight: 600;
   text-decoration: none;
   text-align: center;
@@ -1103,7 +1115,7 @@ h1, h2, h3 {
 }
 
 .cert-btn:hover {
-  background: linear-gradient(135deg, #1d4ed8, #2563eb);
+  color: #f1f4fa;
   transform: translateY(-3px);
   box-shadow: 0 6px 16px rgba(0,0,0,0.15);
 }
@@ -1182,14 +1194,14 @@ h1, h2, h3 {
 }
 
 .exp-details h4 {
-  font-size: 1.2rem;
+  font-size: 1.45rem;
   font-weight: 600;
   margin: 0;
   color: var(--dark);
 }
 
 .exp-details h5 {
-  font-size: 1rem;
+  font-size: 1.25rem;
   font-weight: 500;
   margin: 0.3rem 0;
   color: var(--text);
@@ -1197,13 +1209,14 @@ h1, h2, h3 {
 
 .exp-period {
   display: inline-block;
-  font-size: 0.85rem;
+  font-size: 1rem;
   font-weight: 600;
   color: var(--blue);              
   background: #e8f0fd;            
   padding: 0.25rem 0.8rem;
   border-radius: 12px;
-  margin-top: 0.3rem;
+  margin-top: 0.4rem;
+  margin-bottom: 0.4rem;
 }
 
 
@@ -1215,7 +1228,7 @@ h1, h2, h3 {
 }
 
 .exp-responsibilities li {
-  font-size: 0.95rem;
+  font-size:1.25rem;
   color: var(--text);
   margin-bottom: 0.4rem;
   position: relative;
@@ -1385,24 +1398,44 @@ body.dark-mode .experience-entry {
 
 /* Dark mode base */
 body.dark-mode {
-  background: #111827; /* dark background */
+  background: #272935; /* dark background */
   color: #e5e7eb;      /* default text color */
+}
+
+body.dark-mode .name{
+  color: #e5e7eb;
 }
 
 /* Keep headings unchanged (blue) */
 body.dark-mode h1,
 body.dark-mode h2,
 body.dark-mode h3,
+body.dark-mode h4,
+body.dark-mode h5,
+body.dark-mode h6,
 body.dark-mode .any-heading-marginless,
 body.dark-mode .section-subheading {
-  color: var(--blue);
-  font-size: 1.8rem;
-  font-weight: 500;
+   color: #e5e7eb !important;
 }
+
+body.dark-mode a i{
+  color: var(--blue);
+}
+
+body.dark-mode .dark_i{
+  color: #e5e7eb !important;
+}
+
+body.dark-mode a button i{
+  color: #e5e7eb !important;
+}
+
+
 
 /* Text, paragraphs, and descriptions → white */
 body.dark-mode p,
 body.dark-mode li,
+body.dark-mode i,
 body.dark-mode .introduction,
 body.dark-mode .project-desc,
 body.dark-mode .pub-info p,
@@ -1410,7 +1443,7 @@ body.dark-mode .cert-issuer,
 body.dark-mode .cert-date,
 body.dark-mode .exp-details h5,
 body.dark-mode .exp-period {
-  color: #e5e7eb !important;
+ color:  #98a6ad; 
 }
 
 /* Cards and containers adapt */

@@ -4,7 +4,7 @@ const Experience = () => {
   const experienceData = [
     {
       position: "Internship - Junior Machine Learning Engineering",
-      organization: "LegoIO LLC",
+      organization: "LegoIO LLC, Germantown, MD, USA",
       period: "Jun 2025 – Aug 2025",
       logo: "/images/legoio.jpeg",
       responsibilities: [
@@ -16,7 +16,7 @@ const Experience = () => {
     },
     {
       position: "Graduate Research Assistant",
-      organization: "EECS Department, Oregon State University",
+      organization: "EECS Department, Oregon State University, Corvallis, OR, USA",
       period: "Apr 2024 – Mar 2025",
       logo: "/images/osu.png",
       responsibilities: [
@@ -29,7 +29,7 @@ const Experience = () => {
     },
     {
       position: "Graduate Teaching Assistant",
-      organization: "EECS Department, Oregon State University",
+      organization: "EECS Department, Oregon State University, Corvallis, OR, USA",
       period: "Aug 2023 – Mar 2024",
       logo: "/images/osu.png",
       responsibilities: [
@@ -41,7 +41,7 @@ const Experience = () => {
     },
     {
       position: "Senior Research Assistant",
-      organization: "ECE Department, North South University",
+      organization: "ECE Department, North South University, Dhaka, Bangladesh",
       period: "January 2022 – Sep 2023",
       logo: "/images/nsu.png",
       responsibilities: [
@@ -53,7 +53,7 @@ const Experience = () => {
     },
     {
       position: "Research Assistant",
-      organization: "ECE Department, North South University",
+      organization: "ECE Department, North South University, Dhaka, Bangladesh",
       period: "May 2021 – December 2021",
       logo: "/images/nsu.png",
       responsibilities: [
@@ -64,7 +64,7 @@ const Experience = () => {
     },
     {
       position: "Software Engineering Intern",
-      organization: "Worklife",
+      organization: "Worklife, Dhaka, Bangladesh",
       period: "June 2021 – August 2021",
       logo: "/images/worklife.png",
       responsibilities: [

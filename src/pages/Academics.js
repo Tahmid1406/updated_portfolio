@@ -3,7 +3,7 @@ import React from "react";
 const Academics = () => {
   const academicData = [
     {
-      degree: "M.S. in Computer Science",
+      degree: "Master of Science in Computer Science",
       institution: "Oregon State University, Covallis, OR-97330, United States",
       grade: "CGPA: 3.57/4.00",
       distinction: "Cum Laude",

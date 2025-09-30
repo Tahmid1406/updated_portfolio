@@ -8,7 +8,7 @@ const Projects = () => {
       description:
         "Proposed a Hessian-aware training algorithm that minimizes Hessian trace to promote flatter loss surfaces, improving deep neural network resilience against parameter corruptions and bit-flip attacks. Conducted large-scale experiments on MNIST, CIFAR-10, and ImageNet with CNNs, ResNets, and Vision Transformers, showing a 6–12% reduction in vulnerable parameters without sacrificing accuracy. Demonstrated that trained models required ~3× more bit-flips to degrade performance compared to baselines, and validated compatibility with hardware/system-level defenses such as NeuroPot and RADAR.",
       github: "https://github.com/Tahmid1406/MS-thesis",
-      report: "/pdf/ms-thesis.pdf", 
+      report: "/pdf/MS_report_Tahmid_Hasan_Pranto.pdf", 
       image: "/images/project_hessian_aware_p1.png",
       tech: ["PyTorch", "Deep Learning", "ResNet", "Vision Transformers", "Robustness"],
     },
@@ -18,7 +18,6 @@ const Projects = () => {
       description:
         "Built and deployed a full-stack conversational AI system integrating LLaMA2 with a Retrieval-Augmented Generation (RAG) pipeline. Implemented document ingestion, embeddings (ChromaDB), and vectorDB for context-aware responses. Designed a FastAPI backend with a React frontend, containerized using Docker for seamless deployment.",
       github: "https://github.com/Tahmid1406/LLMchatBot",
-      report: "/pdf/chatbot.pdf",
       image: "/images/project_llm_chatbot_img1.png",
       tech: ["LLaMA2", "LangChain", "ChromaDB", "FastAPI", "React", "Docker"],
     },
@@ -38,7 +37,7 @@ const Projects = () => {
       description:
         "Designed decentralized architectures combining blockchain, smart contracts, and machine learning for fraud detection, federated learning, and secure e-commerce. Proposed a privacy-preserving, incentive-based framework for collaborative model training, achieving 98.9% accuracy while reducing false negatives. Built blockchain-driven e-commerce platforms with data-mining rules for reputation and scam prevention, and extended research into federated medical and financial systems enabling secure collaboration without raw data sharing. Published in IEEE Access and Cybernetics & Systems.",
       github: "",
-      report: "/pdf/blockchain_ml.pdf",
+      report: "/pdf/hybrid.pdf",
       image: "/images/project_hybridization_blockchain+ml.png",
       tech: ["Blockchain", "Smart Contracts", "Machine Learning", "Federated Learning", "Data Mining", "Privacy-Preserving AI"],
     },
@@ -89,27 +88,35 @@ const Projects = () => {
                 </div>
 
                 <div className="project-links">
-                  {project.github && (
+                  {index === 0 ? (
+                    <div className="notice">
+                      ⚠️ Code not Available Due to Collaboration Agreement
+                    </div>
+                  ) : (
+                    project.github && (
+                      <a
+                        href={project.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="proj-btn"
+                      >
+                        GitHub <i className="dark_i fab fa-github"></i>
+                      </a>
+                    )
+                  )}
+
+                  {project.report && (
                     <a
-                      href={project.github}
+                      href={process.env.PUBLIC_URL + project.report}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="proj-btn"
                     >
-                      GitHub <i className="fab fa-github"></i>
-                    </a>
-                  )}
-                  {project.report && (
-                    <a
-                      href={project.report}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="proj-btn secondary"
-                    >
-                      Report <i className="fas fa-file-pdf"></i>
+                      Report <i className="fas dark_i fa-file-pdf"></i>
                     </a>
                   )}
                 </div>
+
               </div>
             </div>
           ))}
